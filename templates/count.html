@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>COUNT</title>
+    </head>
+    <body>
+        <h1>Count = {{ count }}</h1>
+
+        <a href="{% url 'home' %}">Start Again</a>
+        <h1>Your text : </h1>
+        <h2>{{ fulltext }}</h2>
+        <h2>
+            {% for word, counts in wordDictionary %}
+                {{word}} - {{counts}}
+                <br>
+            {% endfor %}
+        </h2>
+
+    </body>
+</html>
